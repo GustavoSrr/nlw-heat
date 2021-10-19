@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { GetLast3MessageService } from "../services/GetLast3MessagesService";
+import { Request, Response } from 'express'
+import { GetLast3MessageService } from '../services/GetLast3MessagesService'
 
 export class Get3LastMessagesController {
   async handle (request: Request, response: Response) {

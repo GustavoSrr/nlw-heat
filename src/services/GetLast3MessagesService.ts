@@ -1,14 +1,14 @@
-import { prismaClient } from "../prisma";
+import { prismaClient } from '../prisma'
 
 export class GetLast3MessageService {
-  async execute() {
+  async execute () {
     const messages = await prismaClient.message.findMany({
       take: 3,
       orderBy: {
-        createdAt: "desc"
+        createdAt: 'desc'
       },
       include: {
-        user: true,
+        user: true
       }
     })
 

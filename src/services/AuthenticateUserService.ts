@@ -24,25 +24,29 @@ interface IUserResponse {
 }
 
 export class AuthenticateUserService {
-  async execute(code: string) {
-    const url = "https://github.com/login/oauth/access_token"
+  async execute (code: string) {
+    const url = 'https://github.com/login/oauth/access_token'
 
-    const { data: AccessTokenResponse } = await axios.post<IAccessTokenResponse>(url, null, {
-      params: {
-        client_id: process.env.GITHUB_CLIENT_ID,
-        client_secret: process.env.GITHUB_CLIENT_SECRET,
-        code
-      },
-      headers: {
-        "Accept": "application/json"
-      }
-    })
+    const { data: AccessTokenResponse } =
+      await axios.post<IAccessTokenResponse>(url, null, {
+        params: {
+          client_id: process.env.GITHUB_CLIENT_ID,
+          client_secret: process.env.GITHUB_CLIENT_SECRET,
+          code
+        },
+        headers: {
+          Accept: 'application/json'
+        }
+      })
 
-    const response = await axios.get<IUserResponse>('https://api.github.com/user', {
-      headers: {
-        authorization: `Bearer ${AccessTokenResponse.access_token}`
+    const response = await axios.get<IUserResponse>(
+      'https://api.github.com/user',
+      {
+        headers: {
+          authorization: `Bearer ${AccessTokenResponse.access_token}`
+        }
       }
-    })
+    )
 
     const { name, login, avatar_url, id } = response.data
 
@@ -52,7 +56,7 @@ export class AuthenticateUserService {
       }
     })
 
-    if(!user) {
+    if (!user) {
       user = await prismaClient.user.create({
         data: {
           name,
@@ -63,17 +67,20 @@ export class AuthenticateUserService {
       })
     }
 
-    const token = sign({
+    const token = sign(
+      {
         user: {
           name: user.name,
           avatar_url: user.avatar_url,
           id: user.id
         }
       },
-      process.env.JWT_SECRET, {
+      process.env.JWT_SECRET,
+      {
         subject: user.id,
-        expiresIn: "1d"
-      })
+        expiresIn: '1d'
+      }
+    )
 
     return { token, user }
   }
