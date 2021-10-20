@@ -1,5 +1,14 @@
+import { FaGithub } from 'react-icons/fa'
+
+import styles from './styles.module.scss'
+
 export function LoginBox() {
   return (
-    <h1>LoginBox</h1>
+    <div className={styles.LoginBoxWrapper}>
+      <strong>Entre e compartilhe sua mensagem.</strong>
+      <a href="" className={styles.SignInWithGithub}>
+        <FaGithub size="24"/> Entrar com GitHub
+      </a>
+    </div>
   )
 }
