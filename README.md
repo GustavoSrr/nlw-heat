@@ -10,7 +10,7 @@
     - TypeScript
     - Socket
     
-  - Em breve:
+  - Logo mais:
     - React
     - React Native
     - Elixir
