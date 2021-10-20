@@ -14,7 +14,7 @@ export const serverHttp = http.createServer(app)
 
 export const io = new Server(serverHttp, {
   cors: {
-    origin: "*"
+    origin: '*'
   }
 })
 
