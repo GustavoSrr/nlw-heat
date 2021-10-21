@@ -1,3 +1,13 @@
+:root {
+  --yellow: #ffcd1e;
+  --pink: #ff008e;
+  --lightGray: #e1e1e6; 
+  --gray: #c4c4cc;
+  --darkGray: #8d8d99;
+
+  --backgroundColor: #121214;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +16,6 @@
 }
 
 body {
-  color: #e1e1e6;
-  background-color: #121214;
+  color: var(--lightGray);
+  background-color: var(--backgroundColor);
 }
