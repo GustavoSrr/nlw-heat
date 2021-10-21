@@ -9,9 +9,10 @@
     - Prisma
     - TypeScript
     - Socket
+    - React
+    - Vite
     
   - Logo mais:
-    - React
     - React Native
     - Elixir
 
