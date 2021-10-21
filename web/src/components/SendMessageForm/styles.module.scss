@@ -12,12 +12,14 @@
 }
 
 .SignOutBtn {
-  background-color: transparent;
-  border: 0;
-  color: #c4c4cc;
   position: absolute;
   left: 24px;
   top: 24px;
+  
+  border: 0;
+  color: var(--gray);
+  background-color: transparent;
+
   cursor: pointer;
 
   &:hover {
@@ -32,30 +34,35 @@
 
   .UserImage {
     padding: 3px;
-    background: linear-gradient(100deg, #ff008e 0.48%, #ffcd1d 100%);
+
     border-radius: 50%;
     line-height: 0;
+
+    background: linear-gradient(100deg, var(--pink) 0.48%, var(--yellow) 100%);
 
     img {
       height: 94px;
       width: 94px;
+
       border-radius: 50%;
-      border: 4px solid #121214;
+      border: 4px solid var(--backgroundColor);
     }
   }
 
   .UserName {
-    font-size: 24px;
-    line-height: 30px;
     margin-top: 16px;
 
+    font-size: 24px;
+    line-height: 30px;
   }
 
   .UserGitHub {
     display: flex;
     align-items: center;
+
     margin-top: 8px;
-    color: #c4c4cc;
+    
+    color: var(--gray);
 
     svg {
       margin-right: 8px;
@@ -79,39 +86,47 @@
   }
 
   textarea {
-    background-color: transparent;
-    border: 0;
-    padding: 24px;
-    resize: none;
     height: 160px;
-    color: #e1e1e6;
+
+    resize: none;
+    padding: 24px;
+
     font-size: 16px;
     line-height: 24px;
+
+    border: 0;
+    color: var(--lightGray);
+    background-color: transparent;
+
 
     &:focus {
       outline: none;
     }
 
     &::placeholder {
-      color: #8d8d99;
+      color: var(--darkGray);
     }
   }
 
   button {
-    background-color: #ff008e;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-self: flex-end;
     align-self: flex-end;
+
     margin: 24px;
     padding: 0 32px;
-    height: 40px;
-    border: 0;
-    color: #fff;
+
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-self: flex-end;
+
+    border: 0;
+    color: white;
+    background-color: var(--pink);
+
     cursor: pointer;
 
     &:hover {

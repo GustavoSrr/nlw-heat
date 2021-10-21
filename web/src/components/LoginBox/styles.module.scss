@@ -17,18 +17,21 @@
   }
 
   .SignInWithGithub {
-    background-color: #ffcd1e;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 56px;
+
     margin-top: 32px;
     padding: 0 40px;
-    height: 56px;
-    color: #09090a;
+
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-self: center;
+
+    color: #09090a;
+    background-color: var(--yellow);
 
     svg {
       margin-right: 16px;
