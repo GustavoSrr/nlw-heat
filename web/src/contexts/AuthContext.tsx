@@ -1,5 +1,7 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
+
 import { api } from "../services/api";
+import 'dotenv/config'
 
 type User = {
   name: string;
@@ -33,7 +35,7 @@ type AuthResponse = {
 export function AuthProvider(props: AuthProvider) {
   const [user, setUser] = useState<User | null>(null)
 
-  const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=5727f744773b10b0a84b`
+  const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=${process.env.GITHUB_CLIENT_ID}`
 
   async function signIn(gitHubCode: string) {
     const response = await api.post<AuthResponse>('authenticate', {
