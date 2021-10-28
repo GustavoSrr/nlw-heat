@@ -1,4 +1,4 @@
-<h1 align="center">🔥 Next Level Week - Heat (🚧)</h1>
+<h1 align="center">🔥 Next Level Week - Heat</h1>
 
 <img align="center" draggable="false" src="./assets/screenshot.png"/>
 
