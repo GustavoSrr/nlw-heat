@@ -1,19 +1,30 @@
-# Tags
+<h1 align="center">⚗️ Elixir</h1>
 
-To start your Phoenix server:
+## 📃 Conteúdo
+  1. [Dependências](#-dependencias)
+  2. [Instalação](#-instalação)
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+## 📁 Dependências
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+  - phoenix
+  - phoenix_ecto
+  - ecto_sql
+  - postgrex
+  - phoenix_live_dashboard
+  - swoosh
+  - telemetry_metrics
+  - telemetry_poller
+  - gettext
+  - jason
+  - plug_cowboy
+  - quantum
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+## 📂 Instalação
+  ```bash
+  # Entre na pasta
+  cd nlw-heat/tags
+  # Instale as dependências
+  mix deps.get
+  # Inicie
+  mix phx.server
+```
