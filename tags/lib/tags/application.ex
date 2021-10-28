@@ -15,9 +15,10 @@ defmodule Tags.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Tags.PubSub},
       # Start the Endpoint (http/https)
-      TagsWeb.Endpoint
+      TagsWeb.Endpoint,
       # Start a worker by calling: Tags.Worker.start_link(arg)
       # {Tags.Worker, arg}
+      Tags.Scheduler
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
