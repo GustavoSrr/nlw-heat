@@ -1,7 +1,7 @@
 <h1 align="center">🖥 React</h1>
 
 ## 📃 Conteúdo
-  1. [Dependências](#-dependencias)
+  1. [Dependências](#-dependências)
   2. [Instalação](#-instalação)
 
 ## 📁 Dependências
